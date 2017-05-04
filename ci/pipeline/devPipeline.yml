@@ -5,14 +5,14 @@ resources:
     source:
       uri: https://github.com/buggavep/concourse-node-test.git
       branch: develop
-#  - name: deploy
-#    type: cf
-#    source:
-#      api: {{cf-api}}
-#      username: {{cf-username}}
-#      password: {{cf-password}}
-#      organization: {{cf-organization}}
-#      space: {{cf-space-dev}}
+  - name: deploy
+    type: cf
+    source:
+      api: {{cf-api}}
+      username: {{cf-username}}
+      password: {{cf-password}}
+      organization: {{cf-organization}}
+      space: {{cf-space-dev}}
 jobs:
   - name: build-deploy
     plan:
